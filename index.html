@@ -78,11 +78,16 @@
       }
 
       .img{
-        width: auto;
         max-width: 440px;
         height: 350px;
         border-radius: 0.25rem;
         box-shadow: 8px 8px 8px -5px #638C99;
+      }
+
+      .circle{
+        width: 200px;
+        height: auto;
+        border-radius: 8px;
       }
       
       button{
@@ -213,7 +218,8 @@
       table tbody td{
         background: white;
         padding: 1rem 2rem;
-        color: #969CB3
+        color: #969CB3;
+        max-width: 200px;
       }
       
       td.description{
@@ -311,6 +317,10 @@
       .one{
         margin-left: 2rem;
         margin-right: 2rem;
+        height: auto;
+        max-width: 600px;
+        border-radius: 0.25rem;
+        box-shadow: 8px 8px 8px -5px #638C99;
       }
 
       .inverse{
@@ -319,6 +329,7 @@
 
       .group{
         margin-left: 3rem;
+        margin-right: 3rem;
       }
       .group-inverse{
         margin-right: 3rem;
@@ -326,6 +337,9 @@
 
       .pay{
         max-width: 25rem;
+      }
+      .payment{
+        width: 200px;
       }
       .pix{
         max-width: 20rem;
@@ -368,11 +382,61 @@
         }
         .group{
           margin-left: 0;
+          margin-bottom: 2rem;
         }
 
         .one{
           margin-top: 2rem;
         }
+
+        #data-table{
+          display: block;
+          width: 100%;
+          border-spacing: 0 0.5rem;
+          overflow-x: auto;
+        }
+        
+        table thead tr th:first-child, 
+        table tbody tr td:first-child{
+          border-radius: 0.25rem 0 0 0.25rem;
+        }
+        
+        table thead tr th:last-child, 
+        table tbody tr td:last-child{
+          border-radius:  0 0.25rem 0.25rem 0;
+        }
+        
+        table thead th{
+          background: white;
+          font-weight: normal;
+          padding: 1rem 2rem;
+          text-align: left;
+          color: #969CB3
+        }
+        
+        table tbody tr{
+          opacity: 0.7;
+        }
+        
+        table tbody tr:hover{
+          opacity: 1;
+        }
+        
+        
+        table tbody td{
+          background: white;
+          padding: 1rem 2rem;
+          color: #969CB3
+        }
+
+        .circle{
+          margin-left: -1rem;
+        }
+
+        .payment{
+          min-width: 100px;
+        }
+
       }
   </style>
 </head>
@@ -397,8 +461,8 @@
               <p></p>A thoughtful and practical gift she will cherish.
             </span>
           </div>
-            <img src="./img/1.jpg" class="img one" alt="Imagem de entrada ">
-            <img src="./img/2.jpg" class="img" alt="Imagem de entrada ">
+            <!-- <img src="./img/1.jpg" class="img one" alt="Imagem de entrada "> -->
+            <img src="./img/2.jpg" class="one" alt="Imagem de entrada ">
         </div>
       </div>
       <div class="card total">
@@ -419,22 +483,44 @@
               
               <p></p>Filled only with luxurious, natural, and eco-friendly products, our bundles will help you stop worrying about what you need . . . so you can relax and cherish those first special days with your little one even more.</span>
             </div>
+            <img src="./img/1.jpg" class="img" alt="Imagem de entrada ">
             </div>
-            <div class="desc inverse">
-              <img src="./img/5.jpeg" class="img" alt="Imagem de entrada ">
-              <div class="group-inverse">
-              <h2>Give Your Mumma-to-Be All Her Must-Have Essentials</h2>
-            <span class="text">
-              <p></p>When your loved one is preparing to bring a new baby into the world, it can be hard to watch her feel stressed and anxious leading up to baby’s big arrival.
-
-              <p></p>What if we told you there was a way to make her last few weeks of pregnancy her most enjoyable?
-
-              <p></p>Instead of combing through online research or reading endless reviews to find the most important hospital must-haves, we’ve developed luxurious, curated bundles to make it easy to give a thoughtful and useful gift.
-
-              <p></p>With Bubby Ready, help mum feel calm, confident, and prepared with the right combination of care products that will be ready and waiting when the big day finally comes.
-            </span>
-          </div>
-            </div>
+            <table id="data-table">
+              <thead>
+                <tr>
+                  <th>Imagem</th>
+                  <th>Descrição</th>
+                  <th>Valor</th>
+                  <th>QR-Code</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="./img/kit/1.png" class="circle">
+                  </td>
+                  <td>A fralda Huggies Tripla Proteção contém a tecnologia X-Protect, que permite que a fralda fique mais seca, tenha maior absorção e um sistema melhor de antivazamento.</td>
+                  <td><strong>$31,99</strong></td>
+                  <td><img src="data:image/png;base64,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" class="payment" alt="" srcset=""></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="./img/kit/2.png" class="circle">
+                  </td>
+                  <td>Fralda Huggies Supreme Care Xtra-Flex, canais em forma de X que se adaptam aos movimentos do seu bebê e não deixam formar "bololô" entre as perninanhas do bebê. Com camada externa suave, distribuição mais rápida e uniforme, com absorção especial para cocô liquido. Tudo para deixá-lo mais confortável!</td>
+                  <td><strong>$45,99</strong></td>
+                  <td><img src="data:image/png;base64,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" class="payment" alt="" srcset=""></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="./img/kit/3.png" class="circle">
+                  </td>
+                  <td>A ClubeBabys tem o propósito de oferecer produtos de higiene do bebê com os melhores preços em uma única caixinha, acabando com todos os problemas, deixando a sua vida mais fácil e levando tudo que seu bebê precisa na porta de sua casa!</td>
+                  <td><strong>$78,90</strong></td>
+                  <td><img src="data:image/png;base64,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" class="payment" alt="" srcset=""></td>
+                </tr>
+              </tbody>
+            </table>
       </div>
     </section>
     <div class="central">
